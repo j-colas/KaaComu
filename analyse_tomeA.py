@@ -14,6 +14,11 @@ import bs4
 
 #%%
 
+def upper_list(z):
+    for i in range(len(z)):
+        z[i] = z[i].upper()
+    return z
+
 def remove_backlash(z):
     for i in range(len(z)):
         z[i] = z[i].rstrip()
@@ -176,14 +181,19 @@ for j in range(7,M,1):
     names = list()
     for i in range(len(i1)):
         i2 = i1[i]
+        flag = False
         while(x1[i2]!="\n"):
             i2 = i2 - 1
-        names.append(x1[i2+1:i1[i]])
+            if abs(i2-i1[i]) > 18:
+                flag = True
+        if(not flag):
+            names.append(x1[i2+1:i1[i]])
         
     names2 = remove_parent(names) # remove didascalies
     
     names2 = remove_backlash(names2) # remove backslash (end)
     
+    names2 = upper_list(names2)
     
     counts = Counter(names2)
     tab = np.array(list(counts.items()))
@@ -193,6 +203,23 @@ for j in range(7,M,1):
     var_x.append(tab)
    
 #%%
+K = len(var_x)  
+all_names = list()
+for k in range(K):
+    y = var_x[k]
+    for j in range(np.size(y[::,0])):
+        all_names.append(str(y[j,0]))
 
-var_x    
-#var_y = np.asarray(var_x)
+ct = Counter(all_names)
+nodes = np.array(list(ct.items()))
+
+#%%
+K = len(var_x)    
+node_name   = list()
+node_weight = list()
+
+for k in range(K):
+    xx = var_x[k]
+    for l in range(np.size(xx[::,0])):
+        if xx[::,l] not in node_name : 
+            node_name.append()
