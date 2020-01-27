@@ -6,6 +6,7 @@ Created on Wed Jan 22 21:59:59 2020
 @author: jules
 """
 
+from natsort import natsorted
 import epub
 import os
 import bs4
@@ -99,44 +100,9 @@ book = epub.open_epub(path+file)
 
 episode_tag = '<p class="amanuansis-renamed-style1">'
 
-tagT1 = 'class="amanuansis-renamed-style3'
 tagT0 = '<?xml version="1.0" encoding="UTF-8"?>' 
 
-
-#personnages = [
-#        'OHORT',
-#        'ARADOC',
-#        'RTHUR',
-#        'ODAGAN',
-#        'ERCEVAL',
-#        'UENIVRE']
-#        'LI',
-#        'RECCAN',
-#        'RE BLAISE',
-#        'A DAME DU LAC',
-#        'ANCELOT',
-#        'ALESSIN',
-#        'ERV DE RINEL',
-#        'TTILA',
-#        'RD',
-#        'UZIT',
-#        'AY',
-#        'E MATRE D',
-#        'VAIN',
-#        'E TAVERNIER',
-#        'ALOGRENANT',
-#        'ENEC',
-#        'E RPURGATEUR',
-#        'ERLIN',
-#        'LIAS',
-#        'ACCA',
-#        'OI BURGONDE']
-
-
-
-
 open_ebook(file,fileOut)
-
 
 file = open(fileOut,'r')
 data = file.read()
@@ -163,4 +129,28 @@ for n in range(N-1):
     ftemp.write(d1)
     
     ftemp.close()
+    
+#%%
+
+li =  [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
+li = natsorted(li)
+
+#%%
+tagT1 = ' — '
+
+file_1 = directory+"/"+li[8]
+
+f1 = open(file_1, mode='r')
+x1 = f1.read()
+f1.close()
+
+i1 = find_all_id(x1," — ")
+
+names = list()
+for i in range(len(i1)):
+    i2 = i1[i]
+    while(x1[i2]!="\n"):
+        i2 = i2 - 1
+    names.append(x1[i2+1:i1[i]])
+
 
