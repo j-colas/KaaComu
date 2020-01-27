@@ -11,6 +11,18 @@ import epub
 import os
 import bs4
 
+def remove_parent(li):
+    for i in range(len(li)):
+        l = li[i]
+        if l.find(")")!=-1:
+            i2 = l.find(")")
+            i1 = i2
+            while(l[i1]!="("):
+                i1 = i1 - 1
+            li[i] = l[:i1:]
+    
+    return li 
+
 def remove_span(data):
     soup1 = bs4.BeautifulSoup(data, 'html.parser')
     for match in soup1.findAll('span'):
@@ -152,5 +164,6 @@ for i in range(len(i1)):
     while(x1[i2]!="\n"):
         i2 = i2 - 1
     names.append(x1[i2+1:i1[i]])
-
+    
+names2 = remove_parent(names) # remove didascalies
 
