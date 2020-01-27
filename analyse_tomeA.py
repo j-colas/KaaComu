@@ -5,7 +5,7 @@ Created on Wed Jan 22 21:59:59 2020
 
 @author: jules
 """
-import pandas
+import numpy as np
 from collections import Counter
 from natsort import natsorted
 import epub
@@ -20,7 +20,7 @@ def remove_parent(li):
             i1 = i2
             while(l[i1]!="("):
                 i1 = i1 - 1
-            li[i] = l[:i1:]
+            li[i] = l[:i1-1:]
     
     return li 
 
@@ -151,9 +151,11 @@ li = natsorted(li)
 #%%
 tagT1 = ' — '
 
-ii = 8
+var_x = list()
 
-for j in range(8,11,1):
+M = len(li)
+
+for j in range(7,M,1):
 
     file_1 = directory+"/"+li[j]
     
@@ -172,7 +174,14 @@ for j in range(8,11,1):
         
     names2 = remove_parent(names) # remove didascalies
     
-    letter_counts = Counter(names2)
-    df = pandas.DataFrame.from_dict(letter_counts, orient='index')
-    df.plot(kind='bar')
+    counts = Counter(names2)
+    tab = np.array(list(counts.items()))
+    wj  = np.sum(tab[::,1].astype(float))/np.size(tab[::,0])
+    tab = np.column_stack((tab,np.ones(len(tab[::,0]))*wj)) 
+    
+    var_x.append(tab)
+   
+#%%
 
+var_x    
+#var_y = np.asarray(var_x)
