@@ -5,7 +5,8 @@ Created on Wed Jan 22 21:59:59 2020
 
 @author: jules
 """
-
+import pandas
+from collections import Counter
 from natsort import natsorted
 import epub
 import os
@@ -150,20 +151,28 @@ li = natsorted(li)
 #%%
 tagT1 = ' — '
 
-file_1 = directory+"/"+li[8]
+ii = 8
 
-f1 = open(file_1, mode='r')
-x1 = f1.read()
-f1.close()
+for j in range(8,11,1):
 
-i1 = find_all_id(x1," — ")
-
-names = list()
-for i in range(len(i1)):
-    i2 = i1[i]
-    while(x1[i2]!="\n"):
-        i2 = i2 - 1
-    names.append(x1[i2+1:i1[i]])
+    file_1 = directory+"/"+li[j]
     
-names2 = remove_parent(names) # remove didascalies
+    f1 = open(file_1, mode='r')
+    x1 = f1.read()
+    f1.close()
+    
+    i1 = find_all_id(x1," — ")
+    
+    names = list()
+    for i in range(len(i1)):
+        i2 = i1[i]
+        while(x1[i2]!="\n"):
+            i2 = i2 - 1
+        names.append(x1[i2+1:i1[i]])
+        
+    names2 = remove_parent(names) # remove didascalies
+    
+    letter_counts = Counter(names2)
+    df = pandas.DataFrame.from_dict(letter_counts, orient='index')
+    df.plot(kind='bar')
 
