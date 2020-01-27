@@ -12,6 +12,13 @@ import epub
 import os
 import bs4
 
+#%%
+
+def remove_backlash(z):
+    for i in range(len(z)):
+        z[i] = z[i].rstrip()
+    return z
+
 def remove_parent(li):
     for i in range(len(li)):
         l = li[i]
@@ -20,7 +27,7 @@ def remove_parent(li):
             i1 = i2
             while(l[i1]!="("):
                 i1 = i1 - 1
-            li[i] = l[:i1-1:]
+            li[i] = l[:i1:]
     
     return li 
 
@@ -89,7 +96,7 @@ def open_ebook(file,file_out=""):
             if check : 
                 data = book.read_item(item)
                 data = data.decode(encod2, errors='ignore')
-                print(data)
+                #print(data)
                 if file_out != "":
                     f.write(data)
         else:
@@ -98,7 +105,8 @@ def open_ebook(file,file_out=""):
     if file_out != "":
         f.close()
     
-
+#%%
+        
 global encod1
 encod1  = 'ascii'
 global encod2 
@@ -173,6 +181,9 @@ for j in range(7,M,1):
         names.append(x1[i2+1:i1[i]])
         
     names2 = remove_parent(names) # remove didascalies
+    
+    names2 = remove_backlash(names2) # remove backslash (end)
+    
     
     counts = Counter(names2)
     tab = np.array(list(counts.items()))
