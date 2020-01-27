@@ -8,7 +8,37 @@ Created on Wed Jan 22 21:59:59 2020
 
 import epub
 import os
+import bs4
 
+def remove_span(data):
+    soup1 = bs4.BeautifulSoup(data, 'html.parser')
+    for match in soup1.findAll('span'):
+        match.unwrap()
+    return str(soup1)
+
+def remove_p(data):
+    soup1 = bs4.BeautifulSoup(data, 'html.parser')
+    for match in soup1.findAll('p'):
+        match.unwrap()
+    return str(soup1)
+
+def remove_h2(data):
+    soup1 = bs4.BeautifulSoup(data, 'html.parser')
+    for match in soup1.findAll('h2'):
+        match.unwrap()
+    return str(soup1)
+
+def remove_a(data):
+    soup1 = bs4.BeautifulSoup(data, 'html.parser')
+    for match in soup1.findAll('a'):
+        match.unwrap()
+    return str(soup1)
+
+def remove_br(data):
+    soup1 = bs4.BeautifulSoup(data, 'html.parser')
+    for match in soup1.findAll('br'):
+        match.unwrap()
+    return str(soup1)
 
 def check(s):
     out = False
@@ -20,9 +50,21 @@ def check(s):
     
     return out
 
+def find_all_id(input_str, search_str):
+    l1 = []
+    length = len(input_str)
+    index = 0
+    while index < length:
+        i = input_str.find(search_str, index)
+        if i == -1:
+            return l1
+        l1.append(i)
+        index = i + 1
+    return l1
+
 def open_ebook(file,file_out=""):
     if file_out != "":
-        f = open(file_out,encoding='ascii',mode='w')
+        f = open(file_out,encoding=encod2,mode='w')
     
     book = epub.open_epub(file)
     for item_id, linear in book.opf.spine.itemrefs:
@@ -32,7 +74,7 @@ def open_ebook(file,file_out=""):
             print ('Linear item "%s"' % item.href)
             if check : 
                 data = book.read_item(item)
-                data = data.decode('ascii', errors='ignore')
+                data = data.decode(encod2, errors='ignore')
                 print(data)
                 if file_out != "":
                     f.write(data)
@@ -43,28 +85,82 @@ def open_ebook(file,file_out=""):
         f.close()
     
 
+global encod1
+encod1  = 'ascii'
+global encod2 
+encod2 = 'latin1'
+
 path = os.getcwd()+'/'
-file = 'Kaamelott_Tome_1.epub'
-fileOut = 'Tome_1.txt'
+Tnum = '1'
+
+file = 'Kaamelott_Tome_'+Tnum+'.epub'
+fileOut = 'Tome_'+Tnum+'.txt'
 book = epub.open_epub(path+file)
 
+episode_tag = '<p class="amanuansis-renamed-style1">'
 
-episode_tag = "<p class=\"amanuansis-renamed-style1\">"
+tagT1 = 'class="amanuansis-renamed-style3'
+tagT0 = '<?xml version="1.0" encoding="UTF-8"?>' 
+
+
+#personnages = [
+#        'OHORT',
+#        'ARADOC',
+#        'RTHUR',
+#        'ODAGAN',
+#        'ERCEVAL',
+#        'UENIVRE']
+#        'LI',
+#        'RECCAN',
+#        'RE BLAISE',
+#        'A DAME DU LAC',
+#        'ANCELOT',
+#        'ALESSIN',
+#        'ERV DE RINEL',
+#        'TTILA',
+#        'RD',
+#        'UZIT',
+#        'AY',
+#        'E MATRE D',
+#        'VAIN',
+#        'E TAVERNIER',
+#        'ALOGRENANT',
+#        'ENEC',
+#        'E RPURGATEUR',
+#        'ERLIN',
+#        'LIAS',
+#        'ACCA',
+#        'OI BURGONDE']
+
+
+
 
 open_ebook(file,fileOut)
 
 
-#file = open("Tome2.txt", encoding="ascii", mode="w+")
+file = open(fileOut,'r')
+data = file.read()
+file.close()
 
-#for item in book.opf.manifest.values():
-#    if 
-#    data = book.read_item(item)
-#    data = data.decode('ascii', errors='ignore')
-#    
-#    print(data)
-#    
-#    file.write(data)
-#    
-#file.close()
-#    
+#%%
+res = find_all_id(data,tagT0)
+
+N = len(res)
+
+directory = 'subfiles_Tome_'+Tnum
+if not os.path.exists(directory):
+    os.makedirs(directory)
+    
+for n in range(N-1):
+    ftemp = open(directory+"/subfile_"+str(n)+".txt","w")
+    
+    d1 = data[res[n]+len(tagT0)+1:res[n+1]]
+    d1 = remove_span(d1)
+    d1 = remove_p(d1)
+    d1 = remove_a(d1)
+    d1 = remove_h2(d1)
+    d1 = remove_br(d1)
+    ftemp.write(d1)
+    
+    ftemp.close()
 
