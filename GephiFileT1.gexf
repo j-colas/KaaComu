@@ -1,0 +1,678 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
+  <meta lastmodifieddate="2020-01-28">
+    <creator>NetworkX 2.4</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes class="edge" mode="static">
+      <attribute id="1" title="value" type="long" />
+    </attributes>
+    <attributes class="node" mode="static">
+      <attribute id="0" title="value" type="double" />
+    </attributes>
+    <nodes>
+      <node id="KARADOC" label="KARADOC">
+        <attvalues>
+          <attvalue for="0" value="13.0" />
+        </attvalues>
+      </node>
+      <node id="BOHORT" label="BOHORT">
+        <attvalues>
+          <attvalue for="0" value="20.0" />
+        </attvalues>
+      </node>
+      <node id="ARTHUR" label="ARTHUR">
+        <attvalues>
+          <attvalue for="0" value="50.0" />
+        </attvalues>
+      </node>
+      <node id="PERCEVAL" label="PERCEVAL">
+        <attvalues>
+          <attvalue for="0" value="20.0" />
+        </attvalues>
+      </node>
+      <node id="LÉODAGAN" label="LÉODAGAN">
+        <attvalues>
+          <attvalue for="0" value="33.0" />
+        </attvalues>
+      </node>
+      <node id="SÉLI" label="SÉLI">
+        <attvalues>
+          <attvalue for="0" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="GUENIÈVRE" label="GUENIÈVRE">
+        <attvalues>
+          <attvalue for="0" value="26.0" />
+        </attvalues>
+      </node>
+      <node id="BRECCAN" label="BRECCAN">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="PÈRE BLAISE" label="PÈRE BLAISE">
+        <attvalues>
+          <attvalue for="0" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="LA DAME DU LAC" label="LA DAME DU LAC">
+        <attvalues>
+          <attvalue for="0" value="3.0" />
+        </attvalues>
+      </node>
+      <node id="LANCELOT" label="LANCELOT">
+        <attvalues>
+          <attvalue for="0" value="27.0" />
+        </attvalues>
+      </node>
+      <node id="GALESSIN" label="GALESSIN">
+        <attvalues>
+          <attvalue for="0" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="HERVÉ DE RINEL" label="HERVÉ DE RINEL">
+        <attvalues>
+          <attvalue for="0" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="ATTILA" label="ATTILA">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="GRÜDÜ" label="GRÜDÜ">
+        <attvalues>
+          <attvalue for="0" value="4.0" />
+        </attvalues>
+      </node>
+      <node id="DEMETRA" label="DEMETRA">
+        <attvalues>
+          <attvalue for="0" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="BUZIT" label="BUZIT">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="KAY" label="KAY">
+        <attvalues>
+          <attvalue for="0" value="4.0" />
+        </attvalues>
+      </node>
+      <node id="LE MAÎTRE D’ARMES" label="LE MAÎTRE D’ARMES">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="YVAIN" label="YVAIN">
+        <attvalues>
+          <attvalue for="0" value="3.0" />
+        </attvalues>
+      </node>
+      <node id="LE TAVERNIER" label="LE TAVERNIER">
+        <attvalues>
+          <attvalue for="0" value="4.0" />
+        </attvalues>
+      </node>
+      <node id="CALOGRENANT" label="CALOGRENANT">
+        <attvalues>
+          <attvalue for="0" value="3.0" />
+        </attvalues>
+      </node>
+      <node id="VENEC" label="VENEC">
+        <attvalues>
+          <attvalue for="0" value="3.0" />
+        </attvalues>
+      </node>
+      <node id="LE RÉPURGATEUR" label="LE RÉPURGATEUR">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="MERLIN" label="MERLIN">
+        <attvalues>
+          <attvalue for="0" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="ÉLIAS" label="ÉLIAS">
+        <attvalues>
+          <attvalue for="0" value="3.0" />
+        </attvalues>
+      </node>
+      <node id="JACCA" label="JACCA">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="L’INTERPRÈTE" label="L’INTERPRÈTE">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="DAGONET" label="DAGONET">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="ANGHARAD" label="ANGHARAD">
+        <attvalues>
+          <attvalue for="0" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="BONIFACE" label="BONIFACE">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="LÉODAGAN ET VENEC" label="LÉODAGAN ET VENEC">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="GUETHENOC" label="GUETHENOC">
+        <attvalues>
+          <attvalue for="0" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="MADENN" label="MADENN">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="AZÉNOR" label="AZÉNOR">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="GAUVAIN" label="GAUVAIN">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="LÉODAGAN ET SÉLI" label="LÉODAGAN ET SÉLI">
+        <attvalues>
+          <attvalue for="0" value="1.0" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="KARADOC" target="BOHORT">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="1" source="KARADOC" target="ARTHUR">
+        <attvalues>
+          <attvalue for="1" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="2" source="KARADOC" target="PERCEVAL">
+        <attvalues>
+          <attvalue for="1" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="3" source="KARADOC" target="LÉODAGAN">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="4" source="KARADOC" target="LE TAVERNIER">
+        <attvalues>
+          <attvalue for="1" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="5" source="BOHORT" target="PERCEVAL">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="6" source="BOHORT" target="ARTHUR">
+        <attvalues>
+          <attvalue for="1" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="7" source="BOHORT" target="LÉODAGAN">
+        <attvalues>
+          <attvalue for="1" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="8" source="BOHORT" target="ATTILA">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="9" source="BOHORT" target="GUENIÈVRE">
+        <attvalues>
+          <attvalue for="1" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="10" source="BOHORT" target="SÉLI">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="11" source="BOHORT" target="LE TAVERNIER">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="12" source="BOHORT" target="DEMETRA">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="13" source="BOHORT" target="LANCELOT">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="14" source="BOHORT" target="MERLIN">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="15" source="BOHORT" target="KAY">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="16" source="BOHORT" target="LA DAME DU LAC">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="17" source="ARTHUR" target="LÉODAGAN">
+        <attvalues>
+          <attvalue for="1" value="12" />
+        </attvalues>
+      </edge>
+      <edge id="18" source="ARTHUR" target="SÉLI">
+        <attvalues>
+          <attvalue for="1" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="19" source="ARTHUR" target="GUENIÈVRE">
+        <attvalues>
+          <attvalue for="1" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="20" source="ARTHUR" target="PERCEVAL">
+        <attvalues>
+          <attvalue for="1" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="21" source="ARTHUR" target="PÈRE BLAISE">
+        <attvalues>
+          <attvalue for="1" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="22" source="ARTHUR" target="LANCELOT">
+        <attvalues>
+          <attvalue for="1" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="23" source="ARTHUR" target="GALESSIN">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="24" source="ARTHUR" target="HERVÉ DE RINEL">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="25" source="ARTHUR" target="GRÜDÜ">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="26" source="ARTHUR" target="DEMETRA">
+        <attvalues>
+          <attvalue for="1" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="27" source="ARTHUR" target="BUZIT">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="28" source="ARTHUR" target="KAY">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="29" source="ARTHUR" target="LE TAVERNIER">
+        <attvalues>
+          <attvalue for="1" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="30" source="ARTHUR" target="LE RÉPURGATEUR">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="31" source="ARTHUR" target="JACCA">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="32" source="ARTHUR" target="ÉLIAS">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="33" source="ARTHUR" target="MERLIN">
+        <attvalues>
+          <attvalue for="1" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="34" source="ARTHUR" target="DAGONET">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="35" source="ARTHUR" target="CALOGRENANT">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="36" source="ARTHUR" target="LA DAME DU LAC">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="37" source="ARTHUR" target="ANGHARAD">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="38" source="ARTHUR" target="GUETHENOC">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="39" source="ARTHUR" target="MADENN">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="40" source="ARTHUR" target="AZÉNOR">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="41" source="PERCEVAL" target="LÉODAGAN">
+        <attvalues>
+          <attvalue for="1" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="42" source="PERCEVAL" target="BRECCAN">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="43" source="PERCEVAL" target="PÈRE BLAISE">
+        <attvalues>
+          <attvalue for="1" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="44" source="PERCEVAL" target="LA DAME DU LAC">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="45" source="PERCEVAL" target="LE TAVERNIER">
+        <attvalues>
+          <attvalue for="1" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="46" source="PERCEVAL" target="DEMETRA">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="47" source="PERCEVAL" target="L’INTERPRÈTE">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="48" source="PERCEVAL" target="SÉLI">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="49" source="PERCEVAL" target="MERLIN">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="50" source="PERCEVAL" target="LANCELOT">
+        <attvalues>
+          <attvalue for="1" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="51" source="LÉODAGAN" target="SÉLI">
+        <attvalues>
+          <attvalue for="1" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="52" source="LÉODAGAN" target="GUENIÈVRE">
+        <attvalues>
+          <attvalue for="1" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="53" source="LÉODAGAN" target="GRÜDÜ">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="54" source="LÉODAGAN" target="LE TAVERNIER">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="55" source="LÉODAGAN" target="DEMETRA">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="56" source="LÉODAGAN" target="LA DAME DU LAC">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="57" source="LÉODAGAN" target="VENEC">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="58" source="LÉODAGAN" target="LÉODAGAN ET VENEC">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="59" source="LÉODAGAN" target="LANCELOT">
+        <attvalues>
+          <attvalue for="1" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="60" source="LÉODAGAN" target="PÈRE BLAISE">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="61" source="LÉODAGAN" target="CALOGRENANT">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="62" source="LÉODAGAN" target="GUETHENOC">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="63" source="SÉLI" target="YVAIN">
+        <attvalues>
+          <attvalue for="1" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="64" source="SÉLI" target="GUENIÈVRE">
+        <attvalues>
+          <attvalue for="1" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="65" source="SÉLI" target="VENEC">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="66" source="SÉLI" target="GRÜDÜ">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="67" source="SÉLI" target="LANCELOT">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="68" source="SÉLI" target="MERLIN">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="69" source="SÉLI" target="BONIFACE">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="70" source="SÉLI" target="GAUVAIN">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="71" source="SÉLI" target="LÉODAGAN ET SÉLI">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="72" source="GUENIÈVRE" target="LE MAÎTRE D’ARMES">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="73" source="GUENIÈVRE" target="GALESSIN">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="74" source="GUENIÈVRE" target="CALOGRENANT">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="75" source="GUENIÈVRE" target="PÈRE BLAISE">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="76" source="GUENIÈVRE" target="VENEC">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="77" source="GUENIÈVRE" target="GRÜDÜ">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="78" source="GUENIÈVRE" target="DEMETRA">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="79" source="GUENIÈVRE" target="MERLIN">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="80" source="GUENIÈVRE" target="LANCELOT">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="81" source="PÈRE BLAISE" target="LE TAVERNIER">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="82" source="LA DAME DU LAC" target="LE TAVERNIER">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="83" source="LANCELOT" target="MERLIN">
+        <attvalues>
+          <attvalue for="1" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="84" source="LANCELOT" target="ÉLIAS">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="85" source="LANCELOT" target="LE TAVERNIER">
+        <attvalues>
+          <attvalue for="1" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="86" source="LANCELOT" target="HERVÉ DE RINEL">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="87" source="LANCELOT" target="DEMETRA">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="88" source="LANCELOT" target="GUETHENOC">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="89" source="GRÜDÜ" target="MERLIN">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="90" source="GRÜDÜ" target="DEMETRA">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="91" source="KAY" target="GUETHENOC">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="92" source="LE TAVERNIER" target="ANGHARAD">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="93" source="MERLIN" target="ÉLIAS">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="94" source="MERLIN" target="GUETHENOC">
+        <attvalues>
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

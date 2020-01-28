@@ -6,6 +6,7 @@ Created on Wed Jan 22 21:59:59 2020
 @author: jules
 """
 import numpy as np
+import networkx as nx
 from collections import Counter
 from natsort import natsorted
 import epub
@@ -213,13 +214,57 @@ for k in range(K):
 ct = Counter(all_names)
 nodes = np.array(list(ct.items()))
 
-#%%
-K = len(var_x)    
-node_name   = list()
-node_weight = list()
+
+source = list()
+target = list()
 
 for k in range(K):
-    xx = var_x[k]
-    for l in range(np.size(xx[::,0])):
-        if xx[::,l] not in node_name : 
-            node_name.append()
+    y = var_x[k]
+    for j in range(np.size(y[::,0])-1):
+        source.append(str(y[0,0]))
+        target.append(str(y[j+1,0]))
+
+edges_ = []
+edges_ = np.column_stack((np.asarray(source),np.asarray(target)))
+
+for n in range(np.size(edges_[::,0])):
+    a = np.copy(edges_[n,0])
+    b = np.copy(edges_[n,1])
+    
+    ia = int(np.where(nodes[::,0]==a)[0])
+    ib = int(np.where(nodes[::,0]==b)[0])
+    
+    if ib < ia : 
+        edges_[n,0] = b
+        edges_[n,1] = a
+
+edges = list()
+poids  = list()
+
+for n in range(np.size(edges_[::,0])):
+    a = np.copy(edges_[n,0])
+    b = np.copy(edges_[n,1])
+    ic = len(np.where(np.logical_and(edges_[::,0] == a, edges_[::,1] == b))[0])
+    if (a,b,{'value':int(ic)}) not in edges: 
+        edges.append((str(a),str(b),{'value':int(ic)}))
+
+
+
+G = nx.Graph()
+
+for i in range(np.size(nodes[::,0])):
+    G.add_nodes_from([(nodes[i,0],{'value':float(nodes[i,1])})]) #(nodes[::,0],{'value':nodes[::,1].astype(float)}))
+
+G.add_edges_from(edges)
+
+nx.write_gexf(G,"GephiFileT"+Tnum+".gexf")
+#%%
+#K = len(var_x)    
+#node_name   = list()
+#node_weight = list()
+#
+#for k in range(K):
+#    xx = var_x[k]
+#    for l in range(np.size(xx[::,0])):
+#        if xx[::,l] not in node_name : 
+#            node_name.append()
